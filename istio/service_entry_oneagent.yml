@@ -5,12 +5,14 @@ metadata:
   name: dynatrace-oneagent-hostnames
 spec:
   hosts:
-  - tno85405.live.dynatrace.com
-  - sg-us-east-1-18-211-248-143-prod22-virginia.live.ruxit.com
-  - sg-us-east-1-34-196-118-31-prod22-virginia.live.ruxit.com
-  - sg-us-east-1-34-207-16-42-prod22-virginia.live.ruxit.com
-  - sg-us-east-1-54-174-161-61-prod22-virginia.live.ruxit.com 
-  - sg-us-east-1-35-172-94-162-prod22-virginia.live.ruxit.com 
+  - uux67365.live.dynatrace.com
+  - sg-us-east-1-34-203-81-189-prod-us-east-cluster-2.live.ruxit.com
+  - sg-us-east-1-54-164-42-22-prod-us-east-cluster-2.live.ruxit.com
+  - sg-us-east-1-54-164-49-176-prod-us-east-cluster-2.live.ruxit.com
+  - sg-us-east-1-34-205-222-178-prod-us-east-cluster-2.live.ruxit.com
+  - sg-us-east-1-34-194-250-12-prod-us-east-cluster-2.live.ruxit.com
+  - sg-us-east-1-35-168-99-76-prod-us-east-cluster-2.live.ruxit.com
+  - sg-us-east-1-52-1-155-152-prod-us-east-cluster-2.live.ruxit.com
   location: MESH_EXTERNAL
   ports:
   - number: 443
@@ -24,70 +26,92 @@ metadata:
   name: dynatrace-oneagent-hostnames
 spec:
   hosts:
-  - tno85405.live.dynatrace.com
-  - sg-us-east-1-18-211-248-143-prod22-virginia.live.ruxit.com
-  - sg-us-east-1-34-196-118-31-prod22-virginia.live.ruxit.com
-  - sg-us-east-1-34-207-16-42-prod22-virginia.live.ruxit.com
-  - sg-us-east-1-54-174-161-61-prod22-virginia.live.ruxit.com 
-  - sg-us-east-1-35-172-94-162-prod22-virginia.live.ruxit.com 
+  - uux67365.live.dynatrace.com
+  - sg-us-east-1-34-203-81-189-prod-us-east-cluster-2.live.ruxit.com
+  - sg-us-east-1-54-164-42-22-prod-us-east-cluster-2.live.ruxit.com
+  - sg-us-east-1-54-164-49-176-prod-us-east-cluster-2.live.ruxit.com
+  - sg-us-east-1-34-205-222-178-prod-us-east-cluster-2.live.ruxit.com
+  - sg-us-east-1-34-194-250-12-prod-us-east-cluster-2.live.ruxit.com
+  - sg-us-east-1-35-168-99-76-prod-us-east-cluster-2.live.ruxit.com
+  - sg-us-east-1-52-1-155-152-prod-us-east-cluster-2.live.ruxit.com
   tls:
   - match:
     - port: 443
       sni_hosts:
-      - tno85405.live.dynatrace.com
+      - uux67365.live.dynatrace.com
     route:
     - destination:
-        host: tno85405.live.dynatrace.com
+        host: uux67365.live.dynatrace.com
         port:
           number: 443
           name: HTTPS
   - match:
     - port: 443
       sni_hosts:
-      - sg-us-east-1-18-211-248-143-prod22-virginia.live.ruxit.com
+      - sg-us-east-1-34-203-81-189-prod-us-east-cluster-2.live.ruxit.com
     route:
     - destination:
-        host: sg-us-east-1-18-211-248-143-prod22-virginia.live.ruxit.com
+        host: sg-us-east-1-34-203-81-189-prod-us-east-cluster-2.live.ruxit.com
         port:
           number: 443
           name: HTTPS
   - match:
     - port: 443
       sni_hosts:
-      - sg-us-east-1-34-196-118-31-prod22-virginia.live.ruxit.com
+      - sg-us-east-1-54-164-42-22-prod-us-east-cluster-2.live.ruxit.com
     route:
     - destination:
-        host: sg-us-east-1-34-196-118-31-prod22-virginia.live.ruxit.com
+        host: sg-us-east-1-54-164-42-22-prod-us-east-cluster-2.live.ruxit.com
         port:
           number: 443
           name: HTTPS
   - match:
     - port: 443
       sni_hosts:
-      - sg-us-east-1-34-207-16-42-prod22-virginia.live.ruxit.com
+      - sg-us-east-1-54-164-49-176-prod-us-east-cluster-2.live.ruxit.com
     route:
     - destination:
-        host: sg-us-east-1-34-207-16-42-prod22-virginia.live.ruxit.com
+        host: sg-us-east-1-54-164-49-176-prod-us-east-cluster-2.live.ruxit.com
         port:
           number: 443
           name: HTTPS
   - match:
     - port: 443
       sni_hosts:
-      - sg-us-east-1-54-174-161-61-prod22-virginia.live.ruxit.com
+      - sg-us-east-1-34-205-222-178-prod-us-east-cluster-2.live.ruxit.com
     route:
     - destination:
-        host: sg-us-east-1-54-174-161-61-prod22-virginia.live.ruxit.com 
+        host: sg-us-east-1-34-205-222-178-prod-us-east-cluster-2.live.ruxit.com
         port:
           number: 443
           name: HTTPS
   - match:
     - port: 443
       sni_hosts:
-      - sg-us-east-1-35-172-94-162-prod22-virginia.live.ruxit.com 
+      - sg-us-east-1-34-194-250-12-prod-us-east-cluster-2.live.ruxit.com
     route:
     - destination:
-        host: sg-us-east-1-35-172-94-162-prod22-virginia.live.ruxit.com
+        host: sg-us-east-1-34-194-250-12-prod-us-east-cluster-2.live.ruxit.com
         port:
           number: 443
           name: HTTPS
+  - match:
+    - port: 443
+      sni_hosts:
+      - sg-us-east-1-35-168-99-76-prod-us-east-cluster-2.live.ruxit.com
+    route:
+    - destination:
+        host: sg-us-east-1-35-168-99-76-prod-us-east-cluster-2.live.ruxit.com
+        port:
+          number: 443
+          name: HTTPS
+  - match:
+    - port: 443
+      sni_hosts:
+      - sg-us-east-1-52-1-155-152-prod-us-east-cluster-2.live.ruxit.com
+    route:
+    - destination:
+        host: sg-us-east-1-52-1-155-152-prod-us-east-cluster-2.live.ruxit.com
+        port:
+          number: 443
+          name: HTTPS                    
